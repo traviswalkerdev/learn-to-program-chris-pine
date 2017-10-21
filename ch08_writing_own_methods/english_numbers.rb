@@ -27,23 +27,54 @@ def englishNumber number
   # write is the part we are writing right now
 
   left = number
-  write = left / 100             # How many hundreds left to write out
-  left = left - (write * 100)    # Subtract off those hundreds
 
+  # millions
+  write = left / 1000000               # How many millions left to write out
+  left = left - (write * 1000000)
 
   if write > 0
-
-    # New trick here
-    hundreds = englishNumber write
-    num_string = num_string + hundreds + " hundred"
+    millions = englishNumber write
+    num_string = num_string + millions + " million"
 
     if left > 0
       num_string = num_string + " "
     end
   end
 
-  write = left / 10              # How many tens left to write out
-  left = left - (write * 10)     # Subract off those tens
+
+
+  # thousands
+  write = left / 1000                  # How many thousands left to write out
+  left = left - (write * 1000)         # Subract off those thousands
+
+  if write > 0
+    thousands = englishNumber write
+    num_string = num_string + thousands + " thousand"
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+
+
+  # hundreds
+  write = left / 100                   # How many hundreds left to write out
+  left = left - (write * 100)          # Subtract off those hundreds
+
+  if write > 0
+    num_string = num_string + ones_place[write - 1] + " hundred"
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+
+
+  # tens
+  write = left / 10                    # How many tens left to write out
+  left = left - (write * 10)           # Subract off those tens
 
   if write > 0
     if ((write == 1) and (left > 0))
@@ -63,8 +94,11 @@ def englishNumber number
     end
   end
 
-  write = left   # How many ones left to write out
-  left = 0       # Subtract off those ones
+
+
+  # ones
+  write = left                         # How many ones left to write out
+  left = 0                             # Subtract off those ones
 
   if write > 0
     num_string = num_string + ones_place[write - 1]
