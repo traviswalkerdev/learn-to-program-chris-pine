@@ -37,7 +37,7 @@ def englishNumber number
     num_string = num_string + millions + " million"
 
     if left > 0
-      num_string = num_string + " "
+      num_string = num_string + " and "
     end
   end
 
@@ -52,7 +52,7 @@ def englishNumber number
     num_string = num_string + thousands + " thousand"
 
     if left > 0
-      num_string = num_string + " "
+      num_string = num_string + " and "
     end
   end
 
@@ -66,7 +66,7 @@ def englishNumber number
     num_string = num_string + ones_place[write - 1] + " hundred"
 
     if left > 0
-      num_string = num_string + " "
+      num_string = num_string + " and "
     end
   end
 

@@ -108,17 +108,42 @@ def englishNumber number
   num_string
 end
 
-puts englishNumber(0)
-puts englishNumber(9)
-puts englishNumber(10)
-puts englishNumber(11)
-puts englishNumber(17)
-puts englishNumber(32)
-puts englishNumber(88)
-puts englishNumber(99)
-puts englishNumber(100)
-puts englishNumber(101)
-puts englishNumber(234)
-puts englishNumber(3211)
-puts englishNumber(999999)
-puts englishNumber(1000000000000)
+def song(bottles)
+
+  # bottles = englishNumber(bottles)
+
+  while bottles > 2
+    puts "#{englishNumber(bottles).capitalize} bottles of beer on the wall,"
+    puts "  #{englishNumber(bottles)} bottles of beer."
+
+    bottles -= 1
+    puts "Take one down and pass it around,"
+    puts "  #{englishNumber(bottles)} more bottles of beer."
+    puts
+  end
+
+  puts "#{englishNumber(bottles).capitalize} bottles of beer on the wall,"
+  puts "  #{englishNumber(bottles)} bottles of beer."
+
+  bottles -= 1
+  puts "Take one down and pass it around,"
+  puts "  One more bottle of beer."
+  puts
+
+
+  puts "One more bottle of beer on the wall,"
+  puts "  one more bottle of beer."
+  puts "Take it down and pass it around,"
+  puts "  no more bottles of beer."
+  puts
+
+  puts "No more bottles of beer on the wall,"
+  puts "  no more bottles of beer."
+  puts "Go to the store and buy some more,"
+  puts "  all new bottles of beer on the wall."
+  puts
+
+end
+
+
+song(99)
