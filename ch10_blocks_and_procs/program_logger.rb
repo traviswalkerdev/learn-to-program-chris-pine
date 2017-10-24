@@ -1,8 +1,8 @@
 def log description, &block
-  puts "Beginning #{description.inspect}..."
+  puts "Beginning '#{description}'..."
 
   result = block[]
-  puts "...#{description.inspect} finished, returning: #{result}"
+  puts "...'#{description}' finished, returning: #{result}"
 end
 
 log "outermost block" do
