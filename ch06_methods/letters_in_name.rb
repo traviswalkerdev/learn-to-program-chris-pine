@@ -1,5 +1,3 @@
-# Letters in user entered name
-
 puts "What is your first name?"
 first = gets.chomp.capitalize
 puts "What is your middle name?"
