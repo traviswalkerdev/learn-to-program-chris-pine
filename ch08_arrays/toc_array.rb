@@ -1,6 +1,6 @@
-toc_array = ["Table of Contents", "Chapter 1:  Numbers", "page 1",
-  "Chapter 2:  Letters", "page 72", "Chapter 3:  Variables",
-  "page 118"]
+toc_array = ["Table of Contents", "Chapter 1:  Getting Started", "page 1",
+  "Chapter 2:  Numbers", "page 9", "Chapter 3:  Letters",
+  "page 13"]
 
 line_width = 60
 half_line_width = line_width / 2
