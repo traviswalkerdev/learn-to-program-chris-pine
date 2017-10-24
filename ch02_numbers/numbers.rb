@@ -14,10 +14,12 @@ hours_in_a_year
 minutes_in_a_decade
 age_in_seconds(37)
 
+puts
 puts "-" * 10
+puts
 
-def convert_seconds_to_years(seconds)
-  puts seconds / 60 / 60 / 24 / 365
+def seconds_to_age(seconds)
+  puts seconds /365 /24 /60 /60
 end
 
-convert_seconds_to_years(1298000000)
+seconds_to_age(1160000000)
