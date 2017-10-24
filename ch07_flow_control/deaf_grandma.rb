@@ -1,6 +1,4 @@
-# Deaf Grandma
-
-puts "Hi Sonny, nice to see you."
+puts "HI SONNY! NICE TO SEE YOU!!"
 response = nil
 bye = 0
 
@@ -11,8 +9,8 @@ while bye < 3
     puts "..."
     bye += 1
   elsif response != response.upcase
-    puts "HUH?!? SPEAK UP SONNY!!"
+    puts "HUH?!? SPEAK UP, SONNY!!"
   else
-    puts "NO, NOT SINCE #{rand(1930..1951).to_s}!"
+    puts "NO, NOT SINCE #{rand(1930..1950)}!"
   end
 end

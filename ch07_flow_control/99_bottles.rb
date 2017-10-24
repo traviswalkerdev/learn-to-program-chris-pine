@@ -1,7 +1,5 @@
-# 99 bottles
-
 def song
-  bottles = 99
+  bottles = 19
   while bottles > 2
     puts "#{bottles} bottles of beer on the wall, #{bottles} bottles of beer."
     bottles -= 1
