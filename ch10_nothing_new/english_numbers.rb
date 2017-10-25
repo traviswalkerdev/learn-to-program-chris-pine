@@ -1,4 +1,4 @@
-def englishNumber number
+def english_number(number)
   if number < 0   # No negative numbers
     return "please enter a number that isn't negative."
   end
@@ -28,12 +28,42 @@ def englishNumber number
 
   left = number
 
+  # trillions
+  write = left / 1000000000000          # How many trillions left to write out
+  left = left - (write * 1000000000000)      # Subtract off those trillions
+
+  if write > 0
+    trillions = english_number write
+    num_string = num_string + trillions + " trillion"
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+
+
+  # billions
+  write = left / 1000000000             # How many billions left to write out
+  left = left - (write * 1000000000)    # Subtract off those billions
+
+  if write > 0
+    billions = english_number write
+    num_string = num_string + billions + " billion"
+
+    if left > 0
+      num_string = num_string + " "
+    end
+  end
+
+
+
   # millions
   write = left / 1000000               # How many millions left to write out
   left = left - (write * 1000000)      # Subtract off those millions
 
   if write > 0
-    millions = englishNumber write
+    millions = english_number write
     num_string = num_string + millions + " million"
 
     if left > 0
@@ -48,7 +78,7 @@ def englishNumber number
   left = left - (write * 1000)         # Subract off those thousands
 
   if write > 0
-    thousands = englishNumber write
+    thousands = english_number write
     num_string = num_string + thousands + " thousand"
 
     if left > 0
@@ -108,17 +138,17 @@ def englishNumber number
   num_string
 end
 
-puts englishNumber(0)
-puts englishNumber(9)
-puts englishNumber(10)
-puts englishNumber(11)
-puts englishNumber(17)
-puts englishNumber(32)
-puts englishNumber(88)
-puts englishNumber(99)
-puts englishNumber(100)
-puts englishNumber(101)
-puts englishNumber(234)
-puts englishNumber(3211)
-puts englishNumber(999999)
-puts englishNumber(1000000000000)
+puts english_number(0)
+puts english_number(9)
+puts english_number(10)
+puts english_number(11)
+puts english_number(17)
+puts english_number(32)
+puts english_number(88)
+puts english_number(99)
+puts english_number(100)
+puts english_number(101)
+puts english_number(234)
+puts english_number(3211)
+puts english_number(999999)
+puts english_number(1000000000000)

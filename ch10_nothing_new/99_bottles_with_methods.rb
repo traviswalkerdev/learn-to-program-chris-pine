@@ -1,4 +1,4 @@
-def englishNumber number
+def english_number(number)
   if number < 0   # No negative numbers
     return "please enter a number that isn't negative."
   end
@@ -33,7 +33,7 @@ def englishNumber number
   left = left - (write * 1000000)      # Subtract off those millions
 
   if write > 0
-    millions = englishNumber write
+    millions = english_number write
     num_string = num_string + millions + " million"
 
     if left > 0
@@ -48,7 +48,7 @@ def englishNumber number
   left = left - (write * 1000)         # Subract off those thousands
 
   if write > 0
-    thousands = englishNumber write
+    thousands = english_number write
     num_string = num_string + thousands + " thousand"
 
     if left > 0
@@ -110,20 +110,20 @@ end
 
 def song(bottles)
 
-  # bottles = englishNumber(bottles)
+  # bottles = english_number(bottles)
 
   while bottles > 2
-    puts "#{englishNumber(bottles).capitalize} bottles of beer on the wall,"
-    puts "  #{englishNumber(bottles)} bottles of beer."
+    puts "#{english_number(bottles).capitalize} bottles of beer on the wall,"
+    puts "  #{english_number(bottles)} bottles of beer."
 
     bottles -= 1
     puts "Take one down and pass it around,"
-    puts "  #{englishNumber(bottles)} more bottles of beer."
+    puts "  #{english_number(bottles)} more bottles of beer."
     puts
   end
 
-  puts "#{englishNumber(bottles).capitalize} bottles of beer on the wall,"
-  puts "  #{englishNumber(bottles)} bottles of beer."
+  puts "#{english_number(bottles).capitalize} bottles of beer on the wall,"
+  puts "  #{english_number(bottles)} bottles of beer."
 
   bottles -= 1
   puts "Take one down and pass it around,"
@@ -146,4 +146,4 @@ def song(bottles)
 end
 
 
-song(99)
+song(9999)
