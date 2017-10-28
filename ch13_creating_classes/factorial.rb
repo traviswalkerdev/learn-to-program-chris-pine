@@ -1,7 +1,7 @@
 class Integer
 
   def factorial
-    number = self
+
     if self < 0
       return "You can't take the factorial of a negative number."
     end
